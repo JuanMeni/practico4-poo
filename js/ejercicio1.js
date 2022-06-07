@@ -5,17 +5,17 @@ let auto = {
   color: "Azul",
   marca: "Ford",
   modelo: "Raptor",
-  estadoMotor: "",
-  motor: () => {
-    if (confirm("Desea encender el auto?") != true) {
-      auto.estadoMotor = `Apagado`;
+  motor: "",
+  estado: () => {
+    if (confirm("Desea encender el auto?") == true) {
+      auto.motor = `Encendido`;
     } else {
-      auto.estadoMotor = `Encendido`;
+      auto.motor = `Apagado`;
     }
   },
 };
 
-auto.motor();
+auto.estado();
 
 let claves = Object.keys(auto);
 

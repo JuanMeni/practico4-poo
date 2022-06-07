@@ -9,3 +9,27 @@ Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y vo
 Rectángulos
 */
 
+class Cuenta {
+    constructor(propiedadTitularParam, propiedadSaldoParam){
+        this.propiedadTitular = propiedadTitularParam;
+        this.propiedadSaldo = propiedadSaldoParam;
+    }
+    ingresar(){}
+    extraer(){}
+    informar(){
+        document.write(`<br>
+        <ul>
+        <li>Nombre: ${this.propiedadTitular}</li>
+        <li>Saldo: ${this.propiedadSaldo}</li>
+        </ul>`);
+    }
+}
+
+let userAlex = new Cuenta("Alex", "0");
+
+console.log(userAlex);
+
+userAlex.informar();
+
+
+
