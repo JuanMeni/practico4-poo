@@ -10,12 +10,16 @@ Rectángulos
 */
 
 class Cuenta {
-    constructor(propiedadTitularParam, propiedadSaldoParam){
-        this.propiedadTitular = propiedadTitularParam;
-        this.propiedadSaldo = propiedadSaldoParam;
+    constructor(propiedadTitular, propiedadSaldo){
+        this.propiedadTitular = 'Alex';
+        this.propiedadSaldo = 0;
     }
-    ingresar(){}
-    extraer(){}
+    ingresar(valor){
+        this.propiedadSaldo = this.propiedadSaldo + valor;
+    }
+    extraer(valor){
+        this.propiedadSaldo = this.propiedadSaldo - valor;
+    }
     informar(){
         document.write(`<br>
         <ul>
@@ -25,11 +29,12 @@ class Cuenta {
     }
 }
 
-let userAlex = new Cuenta("Alex", "0");
-
-console.log(userAlex);
-
-userAlex.informar();
+let alex = new Cuenta();
+alex.informar();
+alex.ingresar(100);
+alex.informar();
+alex.extraer(50);
+alex.informar();
 
 
 
